@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "OxsgGMrQ3VIrBY+DDvadzTVVQqQ8u9BJ5Flgrzou9QPep8A+CZ9xzSyPaAR/ra53fs+7IWw6PcAP86wh3Ua1rQ==",
+  "success": true,
+  "projectFilePath": "/Users/srinathrajuvyasabhattu/Desktop/XamarinSpectrum/XamarinSpectrum.iOS/XamarinSpectrum.iOS.csproj",
+  "expectedPackageFiles": [
+    "/Users/srinathrajuvyasabhattu/.nuget/packages/system.numerics.vectors/4.5.0/system.numerics.vectors.4.5.0.nupkg.sha512",
+    "/Users/srinathrajuvyasabhattu/.nuget/packages/xamarin.essentials/1.6.1/xamarin.essentials.1.6.1.nupkg.sha512",
+    "/Users/srinathrajuvyasabhattu/.nuget/packages/xamarin.forms/5.0.0.2012/xamarin.forms.5.0.0.2012.nupkg.sha512"
+  ],
+  "logs": []
+}

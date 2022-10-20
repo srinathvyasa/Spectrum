@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:Converters="clr-namespace:XamarinSpectrum.Converter"
+             x:Class="XamarinSpectrum.MainPage">
+     <ContentPage.Resources>
+        <ResourceDictionary>
+            <Converters:CellColorConverter x:Key="CellColorConverter"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <StackLayout BackgroundColor="White">
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+            <Label Text="Welcome to Specturm" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+        <StackLayout Padding="50" VerticalOptions="StartAndExpand">
+            
+            <Entry x:Name="Username" Placeholder="Username" PlaceholderColor="Black" TextColor="Black"/>
+            <BoxView BackgroundColor="Black" HeightRequest="1" />
+            <Entry x:Name="Password" Placeholder="Password" PlaceholderColor="Black" TextColor="Black"/>
+            <BoxView BackgroundColor="Black" HeightRequest="1" />
+            <Button HorizontalOptions="CenterAndExpand" Clicked="Button_Clicked" Margin="20" CornerRadius="10" BackgroundColor="#2196F3" TextColor="White" Text="Login" />
+        </StackLayout>
+    </StackLayout>
+
+</ContentPage>

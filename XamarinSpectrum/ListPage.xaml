@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:view="clr-namespace:XamarinSpectrum.Controls;assembly=XamarinSpectrum"
+    xmlns:Converters="clr-namespace:XamarinSpectrum.Converter"
+    x:Class="XamarinSpectrum.ListPage" Title="EMPLOYEE LIST">
+     <ContentPage.Resources>
+        <ResourceDictionary>
+            <Converters:CellColorConverter x:Key="CellColorConverter"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <ScrollView BackgroundColor="White" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+            <StackLayout Padding="20">
+                <Label Text="Employees" TextColor="Black" FontAttributes="Bold"/>
+                <Label Text="Senior Employees are highlighted" TextColor="Black"/>
+                <Label Text="Here are the List of Employees:" TextDecorations="Underline" TextColor="Black"/>
+            <view:ListViewExt 
+            ItemClickCommand="{Binding ListSelectedCommand}"
+                    ItemsSource="{Binding Employees}" HasUnevenRows="True" SeparatorVisibility="Default"
+                    SeparatorColor="Black">
+            <view:ListViewExt.ItemTemplate>
+                <DataTemplate>
+                    <view:CellSelector Height="80">
+                    <view:CellSelector.View>
+                        <StackLayout BackgroundColor="{Binding Senior, Converter={StaticResource CellColorConverter}}">
+                            <Grid x:Name="grid">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                         </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                           <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Label Grid.Row="0" Grid.Column="0" Text="{Binding DisplayName}" TextColor="Black" />
+                         </Grid>
+                        </StackLayout>
+                     </view:CellSelector.View>
+                    </view:CellSelector>
+                </DataTemplate>
+            </view:ListViewExt.ItemTemplate>
+        </view:ListViewExt>
+            </StackLayout>
+        </ScrollView>
+        
+    </ContentPage.Content>
+</ContentPage>

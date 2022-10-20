@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="XamarinSpectrum.EmployeeDetails" Title="EMPLOYEE DETAILS">
+    <ContentPage.Content>
+        <ScrollView BackgroundColor="White">
+            <StackLayout  HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Margin="20" >
+            <Label x:Name="EmployeeName" TextColor="Black" FontAttributes="Bold" FontSize="Large"/>
+            <Label x:Name="EmployeeLocation" TextColor="Black" FontAttributes="Bold" FontSize="Large"/>
+            <Label x:Name="EmploymentType" TextColor="Black" FontAttributes="Bold" FontSize="Large"/>
+                <Button Text="Select Employee" Command="{Binding SelectEmployeeCommmand}" BackgroundColor="#2196F3"></Button>
+        </StackLayout>
+
+            
+        </ScrollView>
+        
+    </ContentPage.Content>
+</ContentPage>
